@@ -88,7 +88,7 @@ function App() {
     });
 
     try {
-      const response = await fetch('http://localhost:3000/chat', {
+      const response = await fetch('https://rag-chatbot-backend-drhk.onrender.com/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userText })
@@ -148,7 +148,7 @@ function App() {
   formData.append('file', file);
 
   try {
-    const response = await fetch('http://localhost:3000/upload', {
+    const response = await fetch('https://rag-chatbot-backend-drhk.onrender.com/upload', {
       method: 'POST',
       body: formData
     });
